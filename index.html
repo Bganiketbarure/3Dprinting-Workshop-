@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Login</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #87ceeb, #b0e0e6);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-container {
+            background-color: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            width: 350px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #1e90ff;
+            margin-bottom: 30px;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px 15px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #1e90ff;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #1c86ee;
+        }
+
+        #message {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Company Login</h2>
+        <input type="text" id="userId" placeholder="User ID">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        const users = {
+            "user1": "pass1",
+            "user2": "pass2",
+            "user3": "pass3",
+            "user4": "pass4",
+            "user5": "pass5",
+            "user6": "pass6",
+            "user7": "pass7",
+            "user8": "pass8",
+            "user9": "pass9",
+            "user10": "pass10",
+            "user11": "pass11",
+            "user12": "pass12",
+            "user13": "pass13",
+            "user14": "pass14",
+            "user15": "pass15",
+            "user16": "pass16",
+            "user17": "pass17",
+            "user18": "pass18",
+            "user19": "pass19",
+            "user20": "pass20",
+            "user21": "pass21",
+            "user22": "pass22",
+            "user23": "pass23",
+            "user24": "pass24",
+            "user25": "pass25",
+            "user26": "pass26",
+            "user27": "pass27",
+            "user28": "pass28",
+            "user29": "pass29",
+            "user30": "pass30",
+            "user31": "pass31",
+            "user32": "pass32",
+            "user33": "pass33",
+            "user34": "pass34",
+            "user35": "pass35",
+            "user36": "pass36",
+            "user37": "pass37",
+            "user38": "pass38",
+            "user39": "pass39",
+            "user40": "pass40"
+        };
+
+        function login() {
+            const userId = document.getElementById('userId').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const message = document.getElementById('message');
+
+            if(users[userId] && users[userId] === password) {
+                // Save logged-in user info
+                localStorage.setItem("loggedInUser", userId);
+                // Redirect to YouTube-style page
+                window.location.href = "youtube.html";
+            } else {
+                message.style.color = "red";
+                message.textContent = "Wrong User ID or Password!";
+            }
+        }
+    </script>
+</body>
+</html>
